@@ -3,3 +3,5 @@
 ## Servicio bind9
 
 ## Cliente ubuntu focal
+
+comandos para instalar
