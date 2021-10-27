@@ -1,7 +1,4 @@
 # Configuración Docker Compose DNS
 
-## Servicio bind9
+## Práctica DNS
 
-## Cliente ubuntu focal
-
-comandos para instalar
