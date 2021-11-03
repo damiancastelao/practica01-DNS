@@ -4,7 +4,8 @@ services:
     container_name: asir_bind9
     image: internetsystemsconsortium/bind9:9.16
     networks:
-      - br02
+      br02:
+        ipv4_address: 10.1.0.254
     ports:
       - 53:53
     volumes:
@@ -17,7 +18,7 @@ services:
     stdin_open: true  # docker run -i
     tty: true         # docker run -t
     dns:
-      - 172.19.0.3  # el contenedor dns server
+      - 10.1.0.254  # el contenedor dns server
 volumes:
   conf:
     external: true # tenemos que tenerlo creado previamente
