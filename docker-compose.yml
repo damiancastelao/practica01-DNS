@@ -4,24 +4,20 @@ services:
     container_name: asir_bind9
     image: internetsystemsconsortium/bind9:9.16
     networks:
-      br02:
+      bind9_subnet:
         ipv4_address: 10.1.0.254
-    ports:
-      - 53:53
     volumes:
-      - conf:/etc/bind
+      - ./conf:/etc/bind
+      - ./zonas:/var/lib/bind
   asir_cliente:
     container_name: asir_cliente
-    image: ubuntu
+    image: alpine
     networks:
-      - br02
+      - bind9_subnet
     stdin_open: true  # docker run -i
     tty: true         # docker run -t
     dns:
       - 10.1.0.254  # el contenedor dns server
-volumes:
-  conf:
-    external: true # tenemos que tenerlo creado previamente
 networks:
-  br02: 
+  bind9_subnet: 
     external: true
