@@ -1,4 +1,3 @@
-version: "3.3"
 services:
   asir_bind9:
     container_name: asir_bind9
