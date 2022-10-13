@@ -10,3 +10,4 @@ $TTL 38400	; 10 hours 40 minutes
 ns		IN A 	10.1.0.254
 test	IN A	10.1.0.2
 alias	IN A    11.11.11.11
+alias	IN TXT    mensaje
