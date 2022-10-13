@@ -24,5 +24,14 @@ _cursiva_
 
 [esto es un link](http://www.google.com)
 
+Una imagen (que está en el repositorio)
+
 ![Yoda](https://github.com/damiancastelao/practica01-DNS/blob/master/captura.png)
 
+Varias lineas de codigo
+
+```
+una linea
+otra
+y otra mas
+```
