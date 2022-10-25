@@ -26,7 +26,7 @@ _cursiva_
 
 Una imagen (que está en el repositorio)
 
-![Yoda](https://github.com/damiancastelao/practica01-DNS/blob/master/imagenes/captura.png)
+![Yoda](./imagenes/captura.png)
 
 Varias lineas de codigo
 
