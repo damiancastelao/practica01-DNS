@@ -1,37 +1,22 @@
 # Práctica DNS
 
-## Ejemplo de mark down
+## Configuración de la red
 
-`codigo`
+Crearemos una red para hacer nuestras pruebas de DNS
 
-**negrita**
+Comando básico:
 
-_cursiva_
-
-* item1
-* item2
-
-1. item numerado
-1. otro
-1. en el medio
-   * y este tambien?
-1. y este?
-
-
-> esto es una cita
-
----
-
-[esto es un link](http://www.google.com)
-
-Una imagen (que está en el repositorio)
-
-![Yoda](./imagenes/captura.png)
-
-Varias lineas de codigo
-
+```shell
+$ docker network create bind9_subnet
 ```
-una linea
-otra
-y otra mas
+
+Para darle los parámetros _personalizados_:
+
+```shell
+$ docker network create \
+  --driver=bridge \
+  --subnet=172.28.0.0/16 \
+  --ip-range=172.28.5.0/24 \
+  --gateway=172.28.5.254 \
+  bind9_subnet
 ```
