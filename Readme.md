@@ -32,4 +32,4 @@ Nos metemos dentro del contenedor
 
 `$ apt update`
 
-`$ apt install -y dnsutils``
+`$ apt install -y dnsutils`
