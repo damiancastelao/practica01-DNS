@@ -1,7 +1,7 @@
 services:
   asir_bind9:
     container_name: asir_bind9
-    image: internetsystemsconsortium/bind9:9.16
+    image: ubuntu/bind9
     # especificamos la plataforma de la imagen
     # es posible conflicto cuando el host es 'arm'
     # ya que no existe una imagen para esa plataforma
@@ -14,7 +14,6 @@ services:
     volumes:
       - ./conf:/etc/bind
       - ./zonas:/var/lib/bind
-      - ./logs:/var/log/bind
 networks:
   bind9_subnet:
     external: true
