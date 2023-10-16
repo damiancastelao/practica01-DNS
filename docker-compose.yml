@@ -14,15 +14,7 @@ services:
     volumes:
       - ./conf:/etc/bind
       - ./zonas:/var/lib/bind
-  asir_cliente:
-    container_name: asir_cliente
-    image: alpine
-    networks:
-      - bind9_subnet
-    stdin_open: true # docker run -i
-    tty: true # docker run -t
-    dns:
-      - 172.28.5.1 # el contenedor dns server
+      - ./logs:/var/log/bind
 networks:
   bind9_subnet:
     external: true
