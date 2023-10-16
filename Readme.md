@@ -20,3 +20,16 @@ $ docker network create \
   --gateway=172.28.5.254 \
   bind9_subnet
 ```
+## Pruebas
+
+Para hacer pruebas necesitamos instalar *dig*
+
+Nos metemos dentro del contenedor
+
+**Attach shell**
+
+`$ docker exect -it nombre_del_contenedor bash`
+
+`$ apt update`
+
+`$ apt install -y dnsutils``
